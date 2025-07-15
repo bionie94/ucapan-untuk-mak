@@ -43,9 +43,9 @@
     }
   </style>
 </head>
-<body onclick="document.getElementById('bgm').play()">
+<body onclick="startEverything()">
   <!-- Notis atas -->
-  <p class="note">Klik mana-mana untuk dengar lagu 🎶</p>
+  <p class="note">Klik mana-mana untuk mulakan ucapan 🎶</p>
 
   <!-- Lagu latar -->
   <audio id="bgm" loop>
@@ -64,6 +64,7 @@
     const text = "Selamat Hari Jadi, Umi! Terima kasih atas kasih sayang dan pengorbanan umi selama ini. Kami semua sayang umi selamanya ❤️";
     let i = 0;
     const speed = 50;
+    let started = false;
 
     function typeEffect() {
       if (i < text.length) {
@@ -73,7 +74,13 @@
       }
     }
 
-    window.onload = typeEffect;
+    function startEverything() {
+      if (!started) {
+        document.getElementById("bgm").play();
+        typeEffect();
+        started = true;
+      }
+    }
   </script>
 </body>
 </html>
