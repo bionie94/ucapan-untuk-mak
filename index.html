@@ -28,20 +28,33 @@
     h1 {
       color: #d35400;
     }
-
-    p {
-      font-size: 1.2em;
-    }
   </style>
 </head>
 <body>
+  <!-- Lagu latar -->
+  <audio autoplay loop>
+    <source src="lagu-umi.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Ucapan menaip -->
   <div class="card">
-    <h1>Selamat Hari Jadi, Umi! 🎉</h1>
-    <p>
-      Terima kasih atas kasih sayang dan pengorbanan umi selama ini.<br><br>
-      Semoga umi dikurniakan kesihatan, kebahagiaan dan keberkatan yang berpanjangan.<br><br>
-      Kami semua sayang umi selamanya ❤️
-    </p>
+    <h1 id="typewriter"></h1>
   </div>
+
+  <script>
+    const text = "Selamat Hari Jadi, Umi! Terima kasih atas kasih sayang dan pengorbanan umi selama ini. Kami semua sayang umi selamanya ❤️";
+    let i = 0;
+    const speed = 50;
+
+    function typeEffect() {
+      if (i < text.length) {
+        document.getElementById("typewriter").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, speed);
+      }
+    }
+
+    window.onload = typeEffect;
+  </script>
 </body>
 </html>
