@@ -15,6 +15,7 @@
       height: 100vh;
       margin: 0;
       padding: 20px;
+      position: relative;
     }
 
     .card {
@@ -28,11 +29,21 @@
     h1 {
       color: #d35400;
     }
+
+    .note {
+      position: absolute;
+      top: 10px;
+      font-size: 14px;
+      color: #555;
+    }
   </style>
 </head>
-<body>
+<body onclick="document.getElementById('bgm').play()">
+  <!-- Notis atas -->
+  <p class="note">Klik mana-mana untuk dengar lagu 🎶</p>
+
   <!-- Lagu latar -->
-  <audio autoplay loop>
+  <audio id="bgm" loop>
     <source src="umi.mp3" type="audio/mpeg">
   </audio>
 
