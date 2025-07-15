@@ -16,6 +16,7 @@
       margin: 0;
       padding: 20px;
       position: relative;
+      flex-direction: column;
     }
 
     .card {
@@ -36,6 +37,10 @@
       font-size: 14px;
       color: #555;
     }
+
+    img {
+      border-radius: 12px;
+    }
   </style>
 </head>
 <body onclick="document.getElementById('bgm').play()">
@@ -46,6 +51,9 @@
   <audio id="bgm" loop>
     <source src="umi.mp3" type="audio/mpeg">
   </audio>
+
+  <!-- Gambar kucing sambut birthday -->
+  <img src="https://media.giphy.com/media/6WFScxN6fi95z3YVQD/giphy.gif" alt="Happy Birthday Cat" style="width: 180px; height: auto; margin-bottom: 20px;">
 
   <!-- Ucapan menaip -->
   <div class="card">
